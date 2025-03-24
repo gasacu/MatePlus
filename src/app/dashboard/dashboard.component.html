@@ -1,0 +1,40 @@
+<div class="dashboard-container">
+  <h1>Bine ai venit!</h1>
+  <p>
+    Progresul tău: <strong>{{ progress }}%</strong>
+  </p>
+
+  <div class="stats">
+    <div class="card">
+      <p>Teste finalizate</p>
+      <h2>{{ completedTests }}</h2>
+    </div>
+    <div class="card">
+      <p>Scor mediu</p>
+      <h2>{{ averageScore }}%</h2>
+    </div>
+  </div>
+
+  <div class="recent-tests">
+    <h2>Ultimele teste realizate</h2>
+    <ul>
+      <li *ngFor="let test of recentTests">
+        <span>{{ test.name }} - Scor: {{ test.score }}%</span>
+        <button class="btn btn-secondary" (click)="reviewTest(test)">
+          Revede testul
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" routerLink="/create-test">
+      Începe un test nou
+    </button>
+    <button class="btn btn-primary" routerLink="/leaderboard">Clasament</button>
+    <button class="btn btn-primary" routerLink="/feedback">Feedback</button>
+    <button class="btn btn-danger" (click)="resetProgress()">
+      Resetează progresul
+    </button>
+  </div>
+</div>

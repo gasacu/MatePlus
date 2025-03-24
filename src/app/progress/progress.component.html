@@ -1,0 +1,7 @@
+<div class="progress-container">
+  <h1>Progresul meu</h1>
+  <div class="progress-bar" *ngFor="let stat of progressStats">
+    <p>{{ stat.label }}: {{ stat.value }}%</p>
+    <div class="bar" [style.width.%]="stat.value"></div>
+  </div>
+</div>

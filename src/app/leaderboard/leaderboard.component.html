@@ -1,0 +1,19 @@
+<div class="leaderboard-container">
+  <h1>Clasament</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Poziție</th>
+        <th>Nume</th>
+        <th>Scor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of leaderboard; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.score }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

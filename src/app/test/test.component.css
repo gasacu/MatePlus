@@ -1,0 +1,22 @@
+.test-page-container {
+  text-align: center;
+  padding: 20px;
+  background: #eef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 10px;
+  margin: 5px;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+li:hover {
+  background: #0056b3;
+}

@@ -1,12 +1,89 @@
-<nav class="navbar">
-  <div class="logo">
-    <a routerLink="/">Math App</a>
-  </div>
-  <ul class="nav-links">
-    <li><a routerLink="/">Dashboard</a></li>
-    <li><a routerLink="/test">Teste</a></li>
-    <li><a routerLink="/results">Rezultate</a></li>
-    <li><a routerLink="/profile">Profil</a></li>
-    <li><a routerLink="/feedback">Feedback</a></li>
-  </ul>
-</nav>
+<a id="skip" href="#hero" title="Mergi direct la conținutul acestei pagini"
+  >Mergi la conținut</a
+>
+<div class="framework">
+  <nav class="language-picker">
+    <ul class="language-picker-list">
+      <li class="language-picker-item Active" lang="ro">
+        <a
+          class="language-picker-link"
+          routerLink="#"
+          title="Vezi acest website în limba Română"
+        >
+          <div class="language-picker-icon">🇷🇴</div>  
+          <span class="language-picker-text">Română</span>
+        </a>
+      </li>
+      <li class="language-picker-item" lang="en">
+        <a
+          class="language-picker-link"
+          routerLink="#"
+          title="See this website in English"
+        >
+          <div class="language-picker-icon">🇬🇧</div>
+          <span class="language-picker-text">English</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar">
+    <div class="menu">
+      <button class="menu-trigger" type="button">🍔</button>
+      <span class="sr-only">Deschide meniul principal</span>
+    </div>
+    <a class="logo" routerLink="/" title="Mergi la pagina principală">
+      <span class="link-text">MatePlus</span>
+    </a>
+    <a
+      class="nav-link login"
+      routerLink="/"
+      title="Mergi la pagina de autentificare"
+    >
+      👤
+      <span class="link-text">Login</span>
+    </a>
+  </nav>
+  <nav class="breadcrumbs">
+    <ol
+      class="breadcrumbs-list"
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList"
+    >
+      <li
+        class="breadcrumb-item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <a
+          class="breadcrumb-link"
+          itemprop="item"
+          href="https://example.com/books"
+        >
+          <span class="link-text" itemprop="name">Prima pagină</span></a
+        >
+        <meta itemprop="position" content="1" />
+      </li>
+      <li
+        class="breadcrumb-item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <a
+          class="breadcrumb-link"
+          itemscope
+          itemtype="https://schema.org/WebPage"
+          itemprop="item"
+          itemid="https://example.com/books/sciencefiction"
+          href="https://example.com/books/sciencefiction"
+        >
+          <span itemprop="name">Profil</span></a
+        >
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+    
+  </nav>
+</div>
+<div class="Hero" id="hero"></div>

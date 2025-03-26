@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './leaderboard.component.html',
-  styleUrl: './leaderboard.component.css',
+  styleUrl: './leaderboard.component.scss',
 })
 export class LeaderboardComponent {
   leaderboard = [

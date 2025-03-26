@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { ProgressComponent } from './progress/progress.component';
 
+
 export const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'create-test', component: TestCreationComponent },

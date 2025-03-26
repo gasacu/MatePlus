@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './results.component.html',
-  styleUrl: './results.component.css',
+  styleUrl: './results.component.scss',
 })
 export class ResultsComponent {
   score: number = 85; // Exemplu de scor

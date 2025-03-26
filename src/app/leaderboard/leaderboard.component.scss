@@ -1,0 +1,21 @@
+.leaderboard-container {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background: #007bff;
+  color: white;
+}

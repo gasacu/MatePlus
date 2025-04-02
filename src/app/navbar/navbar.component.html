@@ -2,47 +2,51 @@
   >Mergi la conținut</a
 >
 <div class="framework">
-  <nav class="language-picker">
-    <ul class="language-picker-list">
-      <li class="language-picker-item Active" lang="ro">
-        <a
-          class="language-picker-link"
-          routerLink="#"
-          title="Vezi acest website în limba Română"
-        >
-          <div class="language-picker-icon">🇷🇴</div>  
-          <span class="language-picker-text">Română</span>
+  <div class="header">
+    <div class="header-main">
+      <nav class="language-picker">
+        <ul class="language-picker-list">
+          <li class="language-picker-item Active" lang="ro">
+            <a
+              class="language-picker-link"
+              routerLink="#"
+              title="Vezi acest website în limba Română"
+            >
+              <div class="language-picker-icon">🇷🇴</div>  
+              <span class="language-picker-text">Română</span>
+            </a>
+          </li>
+          <li class="language-picker-item" lang="en">
+            <a
+              class="language-picker-link"
+              routerLink="#"
+              title="See this website in English"
+            >
+              <div class="language-picker-icon">🇬🇧</div>
+              <span class="language-picker-text">English</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-container">
+        <div class="menu">
+          <button class="menu-trigger" type="button">🍔</button>
+          <span class="sr-only">Deschide meniul principal</span>
+        </div>
+        <a class="logo" routerLink="/" title="Mergi la pagina principală">
+          <span class="link-text">MatePlus</span>
         </a>
-      </li>
-      <li class="language-picker-item" lang="en">
         <a
-          class="language-picker-link"
-          routerLink="#"
-          title="See this website in English"
+          class="nav-link login"
+          routerLink="/"
+          title="Mergi la pagina de autentificare"
         >
-          <div class="language-picker-icon">🇬🇧</div>
-          <span class="language-picker-text">English</span>
+          👤
+          <span class="link-text">Login</span>
         </a>
-      </li>
-    </ul>
-  </nav>
-  <nav class="navbar">
-    <div class="menu">
-      <button class="menu-trigger" type="button">🍔</button>
-      <span class="sr-only">Deschide meniul principal</span>
+      </div>
     </div>
-    <a class="logo" routerLink="/" title="Mergi la pagina principală">
-      <span class="link-text">MatePlus</span>
-    </a>
-    <a
-      class="nav-link login"
-      routerLink="/"
-      title="Mergi la pagina de autentificare"
-    >
-      👤
-      <span class="link-text">Login</span>
-    </a>
-  </nav>
+  </div>
   <nav class="breadcrumbs">
     <ol
       class="breadcrumbs-list"

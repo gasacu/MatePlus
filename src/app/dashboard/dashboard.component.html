@@ -1,40 +1,78 @@
-<div class="dashboard-container">
-  <h1>Bine ai venit!</h1>
-  <p>
-    Progresul tău: <strong>{{ progress }}%</strong>
-  </p>
-
-  <div class="stats">
-    <div class="card">
-      <p>Teste finalizate</p>
-      <h2>{{ completedTests }}</h2>
+<a id="skip" href="#hero" title="Mergi direct la conținutul acestei pagini"
+>Mergi la conținut</a
+>
+<div class="framework">
+  <div class="hero" id="hero">
+    <div class="hero-left">
+      <div class="hero-first">
+        <div class="hero-profile">
+          <img src="assets/images/hero-image.jpg" class="hero-image" width="130" height="130" alt="Imaginea de profil a utilizatorului">
+          <button class="button hero-button-first" routerLink="/create-test">
+            TEST NOU
+          </button>
+        </div>
+      </div>
+      <div class="hero-second">
+          <div class="hero-text">
+            <h1 class="hero-title">Math Learning</h1>
+            <details class="hero-details">
+              <summary class="hero-preview">
+                <p class="hero-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p class="hero-paragraph">
+                  <span class="hero-expand link" title="Afișează întreg textul descriptiv al website-ului MatePlus">Citește mai mult &raquo;</span>
+                </p>
+                
+              </summary>
+              <div class="hero-content">
+                <p class="hero-paragraph">Math Learning este o platformă de învățare a matematicii</p>  
+                <p class="hero-paragraph">Math Learning este o platformă de învățare a matematicii</p>
+                <p class="hero-paragraph">Math Learning este o platformă de învățare a matematicii</p> 
+              </div>
+            </details>
+            <div class="hero-button-group">
+              <button class="button hero-button-second" routerLink="/">Buton</button>
+              <button class="button hero-button-second" routerLink="/">Clasament</button>
+              <button class="button hero-button-second" routerLink="/">Feedback</button>
+            </div>
+          </div>
+      </div>
     </div>
-    <div class="card">
-      <p>Scor mediu</p>
-      <h2>{{ averageScore }}%</h2>
+    <div class="hero-right"> 
+      <div class="hero-third">
+        <div class="hero-progress">
+          <div class="hero-card">
+            <p class="hero-paragraph">Scor mediu</p>
+            <h2 class="hero-text">{{ averageScore }}%</h2>
+          </div>
+          <p class="hero-paragraph">
+            Progresul tău: <strong>{{ progress }}%</strong>
+          </p>
+          <button class="button hero-button-third" (click)="resetProgress()">
+            Resetează progresul
+          </button>
+        </div>
+      </div>
+      <div class="hero-fourth">
+        <div class="hero-card">
+          <p>Teste finalizate</p>
+          <h2>{{ completedTests }}</h2>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="recent-tests">
-    <h2>Ultimele teste realizate</h2>
-    <ul>
-      <li *ngFor="let test of recentTests">
-        <span>{{ test.name }} - Scor: {{ test.score }}%</span>
-        <button class="btn btn-secondary" (click)="reviewTest(test)">
-          Revede testul
-        </button>
-      </li>
-    </ul>
-  </div>
-
-  <div class="btn-group">
-    <button class="btn btn-primary" routerLink="/create-test">
-      Începe un test nou
-    </button>
-    <button class="btn btn-primary" routerLink="/leaderboard">Clasament</button>
-    <button class="btn btn-primary" routerLink="/feedback">Feedback</button>
-    <button class="btn btn-danger" (click)="resetProgress()">
-      Resetează progresul
-    </button>
-  </div>
+  <main class="main">
+    <div class="recent-tests">
+      <h2>Ultimele teste realizate</h2>
+      <ul>
+        <li *ngFor="let test of recentTests">
+          <span>{{ test.name }} - Scor: {{ test.score }}%</span>
+          <button class="btn btn-secondary" (click)="reviewTest(test)">
+            Revede testul
+          </button>
+        </li>
+      </ul>
+    </div>
+    
+  </main>
 </div>
+

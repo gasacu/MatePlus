@@ -50,6 +50,7 @@ body { background: $bg-dark; color: $text-color; margin: 0; }
 a { color: $text-color; text-decoration: underline; }
 a:hover { color: $accent; }
 a:active { color: $text-color; text-decoration: none; }
+link { @extend a; font-weight: 700; }
 img {
   max-width: 100%;
   border-style: none;
@@ -75,6 +76,7 @@ textarea {
   line-height: 1.25;
   margin: 0;
 }
+h1 { font-size: 2.25rem; line-height: 1em; margin: 0; }
 button,
 input {
   overflow: visible;

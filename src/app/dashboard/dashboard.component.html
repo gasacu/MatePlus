@@ -39,23 +39,51 @@
     </div>
     <div class="hero-right"> 
       <div class="hero-third">
-        <div class="hero-progress">
-          <div class="hero-card">
+        <div class="hero-card completed-tests-card">
+          <div class="icon-circle pulse-icon">
+            <span class="material-icons">✅</span>
+          </div>
+          <div class="completed-tests-info">
+            <p>Teste finalizate</p>
+            <h2>{{ completedTests }}</h2>
+            <span class="test-badge" *ngIf="showTestAdded">+1 test nou</span>
+          </div>
+        </div>
+        <div class="hero-card circular-score">
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__background" r="50" cx="60" cy="60" />
+            <circle
+              class="progress-ring__circle"
+              r="50"
+              cx="60"
+              cy="60"
+              [attr.stroke-dasharray]="circumference"
+              [attr.stroke-dashoffset]="circumference - (averageScore / 100) * circumference"
+              [attr.stroke]="strokeColor"
+            />
+          </svg>
+          <div class="circular-score-label">
             <p class="hero-paragraph">Scor mediu</p>
             <h2 class="hero-text">{{ averageScore }}%</h2>
           </div>
-          <p class="hero-paragraph">
-            Progresul tău: <strong>{{ progress }}%</strong>
-          </p>
-          <button class="button hero-button-third" (click)="resetProgress()">
-            Resetează progresul
-          </button>
         </div>
       </div>
       <div class="hero-fourth">
-        <div class="hero-card">
-          <p>Teste finalizate</p>
-          <h2>{{ completedTests }}</h2>
+        <div class="hero-progress">
+          <p class="hero-paragraph">
+            Progresul tău
+            <span class="tooltip-icon" title="Progresul reprezintă media răspunsurilor corecte din testele completate.">ℹ️</span>
+          </p>
+          <div class="progress-bar-container">
+            <div class="progress-bar" [style.width.%]="progress"></div>
+          </div>
+          <p class="progress-percentage">{{ progress }}%</p>
+          <div class="progress-badge" [ngClass]="getProgressLevel()">
+            {{ getProgressLevel() | titlecase }}
+          </div>
+          <button class="button hero-button-third" (click)="resetProgress()">
+            Resetează progresul
+          </button>
         </div>
       </div>
     </div>

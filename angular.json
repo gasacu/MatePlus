@@ -16,6 +16,7 @@
             "outputPath": "dist/math-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/MatePlus/",
             "polyfills": [
               "zone.js"
             ],

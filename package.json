@@ -1,15 +1,13 @@
 {
   "name": "math-app",
   "version": "0.0.0",
-  "homepage": "https://gasacu.github.io/math-app",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "ng build --base-href https://gasacu.github.io/math-app/ && npx angular-cli-ghpages --dir=dist/math-app/browser"
   },
   "private": true,
   "dependencies": {
